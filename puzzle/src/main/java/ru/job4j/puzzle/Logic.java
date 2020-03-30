@@ -72,14 +72,14 @@ public class Logic {
         int[][] table = this.convert();
         boolean result = false;
         for (int i = 0; i < table.length; i++) {
-        if ((table[i][i] == 1) && (monoVertical(table, i) || (monoHorizontal(table, i)) {
+        if ((table[i][i] == 1) && (monoVertical(table, i) || (monoHorizontal(table, i)))) {
                 result = true;
                 break;
             }
         }
         return result;
     }
-        public boolean monoHorizontal(char[][] table, int row) {
+        public boolean monoHorizontal(int[][] table, int row) {
             boolean result = true;
             for (int i = 0; i < table.length; i++) {
                 if (table[row][i] != 1) {
@@ -90,7 +90,7 @@ public class Logic {
             return result;
         }
 
-        public boolean monoVertical(char[][] table, int cell) {
+        public boolean monoVertical(int[][] table, int cell) {
             boolean result = true;
             for (int i = 0; i < table.length; i++) {
                 if (table[i][cell] != 1) {
